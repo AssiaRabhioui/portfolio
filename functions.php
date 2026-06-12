@@ -4,7 +4,6 @@ include('core/theme/configuration.php');
 
 register_nav_menu('header', 'Le menu qui se trouve dans le header');
 register_nav_menu('footer', 'Le menu qui se trouve dans le footer');
-register_nav_menu('social-media', 'Le menu qui regroupe nos réseaux sociaux');
 
 function dw_get_navigation_links(string $menu_name): array
 {
@@ -51,6 +50,7 @@ function dw_asset(string $filename): string
 
     return '';
 }
+
 //charger les traductions existantes
 load_theme_textdomain('hepl-trad', get_template_directory() . '/locales');
 
@@ -60,11 +60,67 @@ function __hepl(string $translation): ?string
     return __($translation, 'hepl-trad');
 }
 
+// recevoir les mails
+
+add_action('admin_post_nopriv_contact_form', 'handle_contact_form');
+add_action('admin_post_contact_form', 'handle_contact_form');
+
+function handle_contact_form(): void
+{
+    $name = sanitize_text_field($_POST['name'] ?? '');
+    $email = sanitize_email($_POST['email'] ?? '');
+    $message = sanitize_textarea_field($_POST['message'] ?? '');
+
+    if (!$name || !$email || !$message) {
+        wp_redirect(add_query_arg('contact', 'error', wp_get_referer()));
+        exit;
+    }
+
+    $to = 'rabhiouiassia@gmail.com';
+    $subject = 'Nouveau message depuis le portfolio';
+    $body = "Nom : $name\nEmail : $email\n\nMessage :\n$message";
+
+    $headers = [
+        'Content-Type: text/plain; charset=UTF-8',
+        'Reply-To: ' . $name . ' <' . $email . '>',
+    ];
+
+    wp_mail($to, $subject, $body, $headers);
+
+    $sent = wp_mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        wp_redirect(add_query_arg('contact', 'success', wp_get_referer()));
+    } else {
+        wp_redirect(add_query_arg('contact', 'fail', wp_get_referer()));
+    }
+    exit;
+}
 
 
+//page un projet
 
 
+add_action('init', 'plai_register_post_types');
 
+function plai_register_post_types(): void
+{
+
+    register_post_type('projet', [
+        'labels' => [
+            'name' => 'Projet',
+            'singular_name' => 'Projet',
+            'add_new_item' => 'Ajouter un projet',
+            'edit_item' => 'Modifier un projet',
+        ],
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'supports' => ['title'],
+        'show_in_rest' => true,
+        'rewrite' => ['slug' => 'fiche-projet'],
+    ]);
+}
 
 
 

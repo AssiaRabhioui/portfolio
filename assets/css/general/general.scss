@@ -9,3 +9,808 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+body {
+  background: radial-gradient(circle, rgb(48, 43, 37) 0%, #000000 100%);
+  color: white;
+  font-size: 16px;
+}
+
+p {
+  line-height: normal;
+}
+
+.hero {
+  padding: 3rem 1rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+
+  &__subtitle {
+    font-family: inter, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.2rem;
+
+  }
+
+  &__subtitle::before {
+    content: "";
+    width: 0.1rem;
+    background-color: #A39175;
+  }
+
+  &__text {
+    font-size: 2rem;
+    width: 70%;
+    margin-bottom: 1rem;
+    line-height: normal;
+  }
+
+  &__description {
+    font-family: inter, sans-serif;
+    font-weight: 300;
+    width: 70%;
+    margin-bottom: 3rem;
+    line-height: normal;
+  }
+
+  &__button {
+    padding: 0.8rem 1rem;
+    border: 0.1rem solid #A39175;
+    border-radius: 0.8rem;
+    color: #A39175;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  &__button:hover {
+    background-color: #A39175;
+    color: black;
+
+  }
+
+  @media (min-width: 767px) {
+
+    &__subtitle {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+    &__text {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+    &__description {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+    }
+    &__button {
+      font-size: 1.3rem;
+    }
+  }
+
+}
+
+.about {
+  padding: 3rem 1rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+
+  &__heading {
+    display: flex;
+    gap: 1rem;
+    font-family: cormorant_Garamond, Serif;
+    margin-bottom: 2rem;
+    align-items: center;
+  }
+
+  &__number {
+    color: #A39175;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  &__description {
+    font-family: inter, sans-serif;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: normal;
+  }
+
+  &__details {
+  }
+
+  &__row {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+  }
+
+  &__label, &__value {
+    font-size: 0.8rem;
+    font-family: inter, sans-serif;
+    line-height: normal;
+
+  }
+
+  &__value {
+    width: 50%;
+    text-align: right;
+  }
+
+  @media (min-width: 767px) {
+
+    &__content {
+      display: flex;
+      gap: 2rem;
+    }
+    &__explication, &__details {
+      flex: 1;
+    }
+    &__heading {
+      margin-bottom: 3rem;
+    }
+    &__description {
+      font-size: 1.2rem;
+    }
+    &__label, &__value {
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.contact {
+  padding: 3rem 1rem;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+
+  &__heading__group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    font-family: cormorant_Garamond, serif;
+  }
+
+  &__heading__number {
+    color: #A39175;
+  }
+
+  &__heading__title {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  &__title {
+    font-family: cormorant_Garamond, serif;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title__surligne {
+    color: #A39175;
+  }
+
+  &__text {
+    font-family: Inter, sans-serif;
+    line-height: normal;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  &__input {
+    background-color: #2C2A2A;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+  }
+  &__input:focus-visible{
+    outline:0.1rem solid #A39175;
+  }
+  &__input:invalid,
+  &__textarea:invalid {
+    border-color: #c94b4b;
+    box-shadow: none;
+    color: #872525;
+
+  }
+  &__input, &__label {
+    font-family: Inter, sans-serif;
+  }
+
+  &__button {
+    padding: 0.8rem 1rem;
+    border: 0.1rem solid #A39175;
+    border-radius: 0.8rem;
+    color: #A39175;
+    background-color: transparent;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    width: 50%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  &__button:hover {
+    background-color: #A39175;
+    color: black;
+
+  }
+
+  @media (min-width: 767px) {
+    &__content {
+      display: flex;
+      gap: 2rem;
+    }
+    &__heading {
+      flex: 1;
+    }
+    &__heading__group {
+      margin-bottom: 3rem;
+    }
+    &__form {
+      flex: 1;
+    }
+    &__title {
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+    }
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+.projet {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+
+  &__top {
+    padding: 0 1rem;
+  }
+
+  &__headers {
+    font-family: cormorant_Garamond, serif;
+    display: flex;
+    gap: 1rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__headers::before {
+    content: "";
+    width: 0.1rem;
+    background-color: #A39175;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  &__title__surligne {
+    color: #A39175;
+  }
+  &__presention{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  &__show {
+    display: flex;
+    gap: 1rem;
+    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    margin-bottom: 3rem;
+    position: relative;
+    min-height: 10rem;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+  }
+
+  &__show:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    flex: 1;
+  }
+
+  &__explication {
+    flex: 1;
+    padding: 1rem 1rem 2rem 0;
+  }
+
+  &__show:nth-child(even) {
+    padding-left: 1rem;
+  }
+
+  &__show:nth-child(odd) {
+    padding-right: 1rem;
+  }
+
+  &__image__show {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: left;
+    display: block;
+  }
+
+  &__number {
+    color: #A39175;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__name {
+    text-transform: capitalize;
+    display: inline-block;
+  }
+
+  &__number, &__name {
+    font-family: cormorant_Garamond, serif;
+
+  }
+
+  &__description {
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    line-height: normal;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    margin-top: auto;
+    color: white;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  &__number, &__name, &__button {
+    font-weight: 500;
+  }
+
+  @media (min-width: 767px) {
+    &__explication {
+      flex: 2;
+    }
+    &__headers {
+      font-size: 1.2rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__explication {
+      font-size: 1.5rem;
+      padding: 2rem 1rem 2rem 0;
+    }
+    &__description {
+      font-size: 1.2rem;
+    }
+    &__image {
+      max-width: 60%;
+      position: relative;
+    }
+
+    &__image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background-color: #A39175B5;
+      transform: scaleX(0);
+      transform-origin: left bottom;
+      transition: transform 0.32s ease-in-out;
+      pointer-events: none;
+    }
+    &__show:hover &__image::after {
+      transform: scaleX(1);
+    }
+    &__button {
+      transition: font-size 0.3s ease-in-out, color 0.3s ease;
+    }
+    &__presention {
+      width: 70%;
+    }
+    &__show{
+      width: 100%;
+      transition: width 1s ease-in-out, background 1s ease-in-out;
+    }
+    &__show:hover{
+      background-color: #212121;
+      width: 110%;
+    }
+    &__show:hover &__button {
+      font-size: 2rem;
+      color: #A39175;
+    }
+  }
+}
+
+
+.single__projet {
+
+
+  &__back {
+    padding: 2rem 1rem;
+    color: white;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    margin-bottom: 7rem;
+  }
+
+  &__back:hover {
+    color: #A39175;
+  }
+
+  &__back::before {
+    content: "<";
+
+  }
+
+  &__title {
+    p {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+      line-height: 2rem;
+    }
+
+  }
+
+  &__description {
+    padding: 0 1rem;
+    line-height: 1rem;
+    margin-bottom: 2rem;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+  }
+
+  &__details {
+    padding: 0 1rem;
+  }
+
+  &__row {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+  }
+
+  &__label, &__value {
+    font-size: 0.8rem;
+  }
+
+  &__value {
+    text-align: right;
+  }
+
+
+  &__show {
+    padding: 2rem 1rem;
+    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+
+
+    &__title {
+      letter-spacing: 0.1rem;
+      margin-bottom: 1rem;
+    }
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      aspect-ratio: 5/2.5;
+      object-fit: cover;
+    }
+  }
+
+  &__show__image__container {
+    width: 90%;
+    position: relative;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+    align-self: center;
+  }
+
+  &__show__image__container::after {
+    content: "";
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+  }
+
+  &__explication {
+    margin-bottom: 2rem;
+  }
+
+  &__explication__title {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__explication__content {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__explication__content__reverse {
+    flex-direction: row-reverse;
+
+  }
+
+  &__explication__image {
+    width: 100%;
+    aspect-ratio: 3 / 5;
+    object-fit: cover;
+  }
+
+  &__explication__media {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__explication__text {
+    flex: 2;
+    font-family: Inter, sans-serif;
+
+    line-height: 1.2rem;
+    font-weight: 300;
+  }
+
+  &__explication__text a {
+    text-decoration: none;
+    color: #A39175;
+  }
+
+  @media (min-width: 767px) {
+    &__explication {
+      padding: 0 5%;
+      align-self: center;
+    }
+    &__title {
+      p {
+        font-size: 3rem;
+      }
+    }
+    &__description {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+    &__label, &__value {
+      font-size: 1rem;
+    }
+    &__show__title, &__explication__title {
+      font-size: 1.7rem;
+    }
+    &__show__title {
+      margin-bottom: 3rem;
+    }
+    &__explication__text {
+      font-size: 1.2rem;
+    }
+    &__show_image {
+      width: 60%;
+      align-self: center;
+    }
+
+    &__explication__media {
+      max-width: 25%;
+    }
+    &__explication__content {
+      margin-bottom: 4rem;
+    }
+
+  }
+
+
+}
+
+p strong {
+  color: #A39175;
+}
+
+@media (min-width: 767px) {
+  p {
+
+  }
+
+}
+
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 3;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+
+  &__hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__brace {
+    font-size: 9rem;
+    color: #A39175;
+    transition: transform 0.8s ease;
+  }
+
+  &__brace__left {
+    transform: translateX(2.5rem);
+  }
+
+  &__brace__right {
+    transform: translateX(-2.5rem);
+  }
+
+  &__content {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: cormorant_Garamond, serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+  }
+
+  &__enter {
+    font-family: Inter, sans-serif;
+    padding: 0.8rem 1.2rem;
+    border: 0.1rem solid #A39175;
+    border-radius: 0.8rem;
+    background-color: transparent;
+    color: #A39175;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.4s ease 0.55s, transform 0.4s ease 0.55s,
+    background-color 0.3s ease, color 0.3s ease;
+  }
+
+  &__enter:hover {
+    background-color: #A39175;
+    color: black;
+  }
+
+  &__open &__brace__left {
+    transform: translateX(-1.5rem);
+  }
+
+  &__open &__brace__right {
+    transform: translateX(1.5rem);
+  }
+
+  &__open &__title,
+  &__open &__enter {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  //} a supprimer essaye lettre
+  //
+  //&__name {
+  //  font-family: cormorant_Garamond, serif;
+  //  font-size: 5rem;
+  //  display: flex;
+  //  align-items: center;
+  //  color: white;
+  //}
+  //
+  //&__initial {
+  //  color: #A39175;
+  //  transform: translateX(0);
+  //  transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
+  //}
+  //&__open &__initial{
+  //  transform: translateX(-0.8rem);
+  //}
+  //&__open &__rest{
+  //  opacity: 1;
+  //  transform: translateX(0) scaleX(1);
+  //}
+  //&__rest__close{
+  //}
+  //&__rest__open{
+  //  transform: translateX(-2rem) scaleX(0.75);
+  //  transform-origin: left center;
+  //  transition: transform 1s cubic-bezier(.22, 1, .36, 1);
+  //  display: inline-block;
+  //}
+
+  @media (min-width: 767px) {
+    &__brace {
+      font-size: 16rem;
+    }
+
+    &__brace__left {
+      transform: translateX(4rem);
+    }
+
+    &__brace__right {
+      transform: translateX(-4rem);
+    }
+
+    &__open &__brace__left {
+      transform: translateX(-3rem);
+    }
+    &__open &__brace__right {
+      transform: translateX(3rem);
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__enter {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+

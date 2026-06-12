@@ -46,3 +46,55 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+/* polices (telechargé via google font): */
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/static/Inter_18pt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('../../fonts/Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: cormorant_Garamond, Serif ;
+    src: url('../../fonts/Cormorant_Garamond/static/CormorantGaramond-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: cormorant_Garamond, Serif ;
+    src: url('../../fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: cormorant_Garamond, Serif ;
+    src: url('../../fonts/Cormorant_Garamond/static/CormorantGaramond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: cormorant_Garamond, Serif ;
+    src: url('../../fonts/Cormorant_Garamond/static/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

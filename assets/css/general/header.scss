@@ -1,0 +1,92 @@
+.header {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+  margin-bottom: 2rem;
+
+  &__name {
+    font-family: cormorant_Garamond, serif;
+  }
+  &__right{
+    display: flex;
+    gap: 0.8rem;
+  }
+  &__language__choice{
+    font-family: Inter, sans-serif;
+    padding: 0.5rem ;
+    background-color: black;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #A39175;
+    color: #A39175;
+    transition: color 3ms ease-in-out, background-color 3ms ease-in-out;
+    text-decoration: none;
+  }
+  @media (min-width: 767px){
+    &__name{
+      font-size: 1.3rem;
+    }
+    &__language__choice:hover{
+      background-color: #A39175;
+      color: white;
+    }
+  }
+
+  //navigation
+
+  &__nav{
+    display: flex;
+    align-items: center;
+  }
+  &__nav__list{
+    display: flex;
+    gap: 1rem;
+  }
+  &__nav__list__item__link{
+    color: white;
+    text-decoration: none;
+    transition: color 3ms ease-in-out;
+    font-family: Inter, sans-serif;
+  }
+  @media (min-width: 767px){
+    &__nav__list__item__link{
+      font-size: 1.1rem;
+    }
+    &__nav__list__item__link:hover{
+      color: #A39175;
+
+    }
+  }
+}
+.sparkle-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.spark {
+  position: fixed;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 30%;
+  pointer-events: none;
+  box-shadow: 0 0 0.5rem #A39175;
+  filter: blur(0.1rem);
+  transform: translate(-50%, -50%);
+  animation: spark 0.5s ease-out forwards;
+}
+
+@keyframes spark {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.8);
+  }
+}

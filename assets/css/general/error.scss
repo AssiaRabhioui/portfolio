@@ -1,0 +1,52 @@
+.error{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+
+  &__background{
+    border-radius: 50%;
+    font-family: cormorant_Garamond, serif;
+    padding: 5rem;
+    border: 0.1rem solid #A39175;
+    margin-bottom: 3rem;
+    opacity: 40%;
+    animation: flotter 3s ease-in-out infinite;
+  }
+  &__number{
+    font-size: 2rem;
+    opacity: 70%;
+    color: #A39175;
+    animation:  rotate 3s ease-in-out infinite;
+  }
+  &__texte{
+    font-family: cormorant_Garamond, serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  &__texte__em{
+    color: #A39175;
+  }
+  &__home{
+    padding: 1rem 0.8rem;
+    border-radius: 0.8rem;
+    border: 0.1rem solid #A39175;
+    background-color: transparent;
+    color: #A39175;
+    text-decoration: none;
+  }
+  &__home:hover{
+    background-color: #A39175;
+    color: black;
+
+  }
+}
+@keyframes flotter {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+@keyframes rotate {
+  from   { transform: rotate(0); }
+  to  { transform: rotate(360deg); }
+}

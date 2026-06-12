@@ -1,6 +1,6 @@
 {
   "wp-content/themes/portfolio/assets/css/styles.scss": {
-    "file": "assets/scss-Cj2kOXU9.css",
+    "file": "assets/scss-C8DaVP4p.css",
     "src": "wp-content/themes/portfolio/assets/css/styles.scss",
     "isEntry": true,
     "name": "scss",
@@ -8,8 +8,40 @@
       "scss.css"
     ]
   },
+  "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Bold.ttf": {
+    "file": "assets/CormorantGaramond-Bold-Q3jUdXm6.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Bold.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Light.ttf": {
+    "file": "assets/CormorantGaramond-Light-Jd3jEDF-.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Light.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Medium.ttf": {
+    "file": "assets/CormorantGaramond-Medium-BlCyJZoz.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Medium.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf": {
+    "file": "assets/CormorantGaramond-Regular-BtKDB5pG.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Cormorant_Garamond/static/CormorantGaramond-Regular.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Bold.ttf": {
+    "file": "assets/Inter_18pt-Bold-BVTOCPiq.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Bold.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Light.ttf": {
+    "file": "assets/Inter_18pt-Light-DbzEu6wT.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Light.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Medium.ttf": {
+    "file": "assets/Inter_18pt-Medium-BtfNrkJj.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Medium.ttf"
+  },
+  "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Regular.ttf": {
+    "file": "assets/Inter_18pt-Regular-BpskOkD5.ttf",
+    "src": "wp-content/themes/portfolio/assets/fonts/Inter/static/Inter_18pt-Regular.ttf"
+  },
   "wp-content/themes/portfolio/assets/js/main.js": {
-    "file": "assets/js-BhB4YB1w.js",
+    "file": "assets/js-9-FbO_qs.js",
     "name": "js",
     "src": "wp-content/themes/portfolio/assets/js/main.js",
     "isEntry": true
