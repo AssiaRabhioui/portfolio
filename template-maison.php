@@ -23,11 +23,8 @@ $contact_title_surligne = get_field('contact_title_surligne');
 $contact_text = get_field('contact_text');
 
 $contact_label_name = get_field('contact_label_name');
-$contact_error_name = get_field('contact_error_name');
 $contact_label_email = get_field('contact_label_email');
-$contact_error_email = get_field('contact_error_email');
 $contact_label_message = get_field('contact_label_message');
-$contact_error_text = get_field('contact_error_text');
 $contact_button = get_field('contact_button');
 
 
@@ -37,16 +34,21 @@ $contact_button = get_field('contact_button');
 <?php get_header(); ?>
 
 
-    <main class="page" itemprop="mainContentOfPage">
+    <main class="page" itemprop="mainEntity"
+          itemscope
+          itemtype="https://schema.org/Person">
         <section class="hero">
-            <h1 class="sro">
+            <h1 class="sro"
+                itemprop="name">
                 Presentation Assia Rabhioui
             </h1>
 
-            <p class="hero__subtitle">
+            <p class="hero__subtitle"
+               itemprop="jobTitle">
                 <?= esc_html($hero_subtitle); ?>
             </p>
-            <p class="hero__text">
+            <p class="hero__text"
+               itemprop="knowsAbout">
                 <?= wp_kses_post($hero_text); ?>
             </p>
 
@@ -55,13 +57,14 @@ $contact_button = get_field('contact_button');
             </p>
 
             <?php if (!empty($hero_button)) : ?>
-                <a href="<?= esc_url($hero_button['url']); ?>" class="hero__button">
+                <a href="<?= esc_url($hero_button['url']); ?>" class="hero__button"
+                >
                     <?= esc_html($hero_button['title']); ?>
                 </a>
             <?php endif; ?>
         </section>
 
-        <section class="about" aria-labelledby="about-title">
+        <section class="about" aria-labelledby="about_title">
             <div class="about__heading">
                 <p class="about__number">
                     <?= esc_html($about_number); ?>
@@ -73,7 +76,8 @@ $contact_button = get_field('contact_button');
             <div class="about__content">
                 <div class="about__explication">
 
-                    <p class="about__description">
+                    <p class="about__description"
+                       itemprop="description">
                         <?= esc_html($about_description); ?>
                     </p>
                 </div>
@@ -121,7 +125,6 @@ $contact_button = get_field('contact_button');
                             <?= esc_html($contact_label_name); ?>
                         </label>
                         <input id="name" name="name" type="text" class="contact__input" required>
-                        <p class="contact__error"> <?= esc_html($contact_error_name); ?></p>
                     </div>
 
                     <div class="contact__field">
@@ -130,8 +133,6 @@ $contact_button = get_field('contact_button');
                         </label>
                         <input id="email" name="email" type="email" class="contact__input" required
                                autocomplete="email">
-                        <p class="contact__error"> <?= esc_html($contact_error_email); ?>Please enter a valid email
-                            address.</p>
                     </div>
 
                     <div class="contact__field">
@@ -140,8 +141,6 @@ $contact_button = get_field('contact_button');
                         </label>
                         <textarea id="message" name="message" class="contact__input contact__textarea" rows="6"
                                   required></textarea>
-                        <p class="contact__error"> <?= esc_html($contact_error_text); ?>Please enter a valid email
-                            address.</p>
                     </div>
 
                     <button type="submit" class="contact__button">

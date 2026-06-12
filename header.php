@@ -14,17 +14,19 @@ $header = dw_get_navigation_links('header');
     <meta name="author" content="Assia Rabhioui">
     <meta name="description" content="portfolio de Assia Rabhioui">
     <meta name="keyword" content="portfolio, Assia Rabhioui, Web designer, ui designer, ux designer">
-    <meta name="google-site-verification" content="kIpigkWoBxRyx90vwJoie37yUyDf-b51jko6dkvwrQk" />
+    <meta name="google-site-verification" content="kIpigkWoBxRyx90vwJoie37yUyDf-b51jko6dkvwrQk"/>
     <title><?= get_the_title() ?></title>
     <link rel="stylesheet" type="text/css" href="<?= dw_asset('css'); ?>">
     <link rel=" stylesheet" type="text/scss" href="<?= dw_asset('css'); ?>">
     <script src="<?= dw_asset('js') ?>" defer></script>
 </head>
 
-<body itemscope itemtype="https://schema.org/Organization">
+<body itemscope itemtype="https://schema.org/WebPage">
 <div class="sparkle-layer" aria-hidden="true"></div>
-<header class="header">
-    <h1 class="header__name" itemprop="name"">
+<header class="header"
+        itemprop="author"
+        itemscope itemtype="https://schema.org/Person">
+    <h1 class="header__name" itemprop="name">
         Assia Rabhioui
     </h1>
     <div class="header__right">

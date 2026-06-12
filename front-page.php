@@ -6,7 +6,8 @@ $intro_enter = get_field('intro_enter');
 
 ?>
 <?php get_header(); ?>
-<main class="intro intro__open" itemprop="mainContentOfPage">
+<main class="intro intro__open"
+      itemprop="mainContentOfPage">
     <button class="intro__trigger" type="button" aria-label="Ouvrir l’introduction">
 <!--           <span class="intro__name">-->
 <!--            <span class="intro__initial">A</span>-->
@@ -17,7 +18,8 @@ $intro_enter = get_field('intro_enter');
     </button>
 
     <div class="intro__content">
-        <h1 class="intro__title">
+        <h1 class="intro__title"
+            itemprop="name">
             <?= esc_html($intro_title); ?>
         </h1>
 

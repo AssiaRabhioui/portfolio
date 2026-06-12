@@ -15,14 +15,19 @@ $single_projet_explications = get_field('single_projet_explications');
 ?>
 <?php get_header(); ?>
 
-    <main class="single__projet" itemprop="mainContentOfPage">
+    <main class="single__projet"
+          itemprop="mainEntity"
+          itemscope
+          itemtype="https://schema.org/CreativeWork">
         <a class="single__projet__back" href="<?= esc_url(home_url('/projets/')); ?>">
             <?= esc_html($single_projet_back) ?>
         </a>
-        <h1 class="single__projet__title">
+        <h1 class="single__projet__title"
+            itemprop="name">
             <?= wp_kses_post($single_projet_title); ?>
         </h1>
-        <p class="single__projet__description">
+        <p class="single__projet__description"
+           itemprop="description">
             <?= esc_html($single_projet_description); ?>
         </p>
         <div class="single__projet__details">
@@ -44,6 +49,7 @@ $single_projet_explications = get_field('single_projet_explications');
             <?php if (!empty($single_projet_show_image)) : ?>
                 <div class="single__projet__show__image__container">
                     <img class="single__projet__show__image"
+                         itemprop="image"
                          src="<?= esc_url($single_projet_show_image['url']); ?>"
                          alt="<?= esc_attr($single_projet_show_image['alt']); ?>">
                 </div>
@@ -58,6 +64,7 @@ $single_projet_explications = get_field('single_projet_explications');
                             <?php if (!empty($single_projet_explication['single_projet_explication_image'])) : ?>
                                 <div class="single__projet__explication__media">
                                     <img class="single__projet__explication__image"
+                                         itemprop="image"
                                          src="<?= esc_url($single_projet_explication['single_projet_explication_image']['url']); ?>"
                                          alt="<?= esc_attr($single_projet_explication['single_projet_explication_image']['alt']); ?>">
                                 </div>
