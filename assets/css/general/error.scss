@@ -1,3 +1,5 @@
+@use "variables" as variable;
+
 .error{
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
     border-radius: 50%;
     font-family: cormorant_Garamond, serif;
     padding: 5rem;
-    border: 0.1rem solid #A39175;
+    border: 0.1rem solid variable.$color-gold;
     margin-bottom: 3rem;
     opacity: 40%;
     animation: flotter 3s ease-in-out infinite;
@@ -16,7 +18,7 @@
   &__number{
     font-size: 2rem;
     opacity: 70%;
-    color: #A39175;
+    color: variable.$color-gold;
     animation:  rotate 3s ease-in-out infinite;
   }
   &__texte{
@@ -25,18 +27,18 @@
     margin-bottom: 3rem;
   }
   &__texte__em{
-    color: #A39175;
+    color: variable.$color-gold;
   }
   &__home{
     padding: 1rem 0.8rem;
     border-radius: 0.8rem;
-    border: 0.1rem solid #A39175;
+    border: 0.1rem solid variable.$color-gold;
     background-color: transparent;
-    color: #A39175;
+    color: variable.$color-gold;
     text-decoration: none;
   }
   &__home:hover{
-    background-color: #A39175;
+    background-color: variable.$color-gold;
     color: black;
 
   }

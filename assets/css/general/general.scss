@@ -1,3 +1,5 @@
+@use "variables" as variable;
+
 .sro {
   position: absolute;
   width: 1px;
@@ -11,8 +13,8 @@
 }
 
 body {
-  background: radial-gradient(circle, rgb(48, 43, 37) 0%, #000000 100%);
-  color: white;
+  background: variable.$background-color;
+  color: variable.$color-white;
   font-size: 16px;
 }
 
@@ -22,7 +24,7 @@ p {
 
 .hero {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+  border-bottom: 0.1rem solid variable.$color-border;
 
   &__subtitle {
     font-family: inter, sans-serif;
@@ -38,7 +40,7 @@ p {
   &__subtitle::before {
     content: "";
     width: 0.1rem;
-    background-color: #A39175;
+    background-color: variable.$color-gold;
   }
 
   &__text {
@@ -58,16 +60,16 @@ p {
 
   &__button {
     padding: 0.8rem 1rem;
-    border: 0.1rem solid #A39175;
+    border: 0.1rem solid variable.$color-border;
     border-radius: 0.8rem;
-    color: #A39175;
+    color: variable.$color-border;
     text-decoration: none;
     display: inline-block;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
 
   &__button:hover {
-    background-color: #A39175;
+    background-color: variable.$color-border;
     color: black;
 
   }
@@ -95,18 +97,18 @@ p {
 
 .about {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+  border-bottom: 0.1rem solid variable.$color-border;
 
   &__heading {
     display: flex;
     gap: 1rem;
-    font-family: cormorant_Garamond, Serif;
+    font-family: cormorant_Garamond, serif;
     margin-bottom: 2rem;
     align-items: center;
   }
 
   &__number {
-    color: #A39175;
+    color: variable.$color-border;
   }
 
   &__title {
@@ -121,21 +123,17 @@ p {
     line-height: normal;
   }
 
-  &__details {
-  }
-
   &__row {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    border-top: 0.1rem solid variable.$color-border;
   }
 
   &__label, &__value {
     font-size: 0.8rem;
     font-family: inter, sans-serif;
     line-height: normal;
-
   }
 
   &__value {
@@ -162,12 +160,11 @@ p {
       font-size: 1rem;
     }
   }
-
 }
 
 .contact {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+  border-bottom: 0.1rem solid variable.$color-border;
 
   &__heading__group {
     display: flex;
@@ -178,7 +175,7 @@ p {
   }
 
   &__heading__number {
-    color: #A39175;
+    color: variable.$color-border;
   }
 
   &__heading__title {
@@ -193,7 +190,7 @@ p {
   }
 
   &__title__surligne {
-    color: #A39175;
+    color: variable.$color-border;
   }
 
   &__text {
@@ -226,26 +223,29 @@ p {
     padding: 0.8rem 1rem;
     border: none;
     border-radius: 0.8rem;
-    color: white;
+    color: variable.$color-white;
   }
-  &__input:focus-visible{
-    outline:0.1rem solid #A39175;
+
+  &__input:focus-visible {
+    outline: 0.1rem solid variable.$color-border;
   }
+
   &__input:invalid,
   &__textarea:invalid {
-    border-color: #c94b4b;
+    border-color: variable.$color-error;
     box-shadow: none;
-    color: #872525;
+    color: variable.$color-error;
   }
+
   &__input, &__label {
     font-family: Inter, sans-serif;
   }
 
   &__button {
     padding: 0.8rem 1rem;
-    border: 0.1rem solid #A39175;
+    border: 0.1rem solid variable.$color-border;
     border-radius: 0.8rem;
-    color: #A39175;
+    color: variable.$color-border;
     background-color: transparent;
     text-decoration: none;
     display: inline-block;
@@ -255,7 +255,7 @@ p {
   }
 
   &__button:hover {
-    background-color: #A39175;
+    background-color: variable.$color-border;
     color: black;
 
   }
@@ -305,7 +305,7 @@ p {
   &__headers::before {
     content: "";
     width: 0.1rem;
-    background-color: #A39175;
+    background-color: variable.$color-border;
   }
 
   &__title {
@@ -314,9 +314,10 @@ p {
   }
 
   &__title__surligne {
-    color: #A39175;
+    color: variable.$color-border;
   }
-  &__presention{
+
+  &__presention {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -326,12 +327,12 @@ p {
   &__show {
     display: flex;
     gap: 1rem;
-    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    border-top: 0.1rem solid variable.$color-border;
     margin-bottom: 3rem;
     position: relative;
     min-height: 10rem;
     cursor: pointer;
-    color: white;
+    color: variable.$color-white;
     text-decoration: none;
   }
 
@@ -365,7 +366,7 @@ p {
   }
 
   &__number {
-    color: #A39175;
+    color: variable.$color-border;
     display: inline-block;
     margin-right: 1rem;
     margin-bottom: 2rem;
@@ -393,7 +394,7 @@ p {
     bottom: 0;
     top: auto;
     margin-top: auto;
-    color: white;
+    color: variable.$color-white;
     background-color: transparent;
     border: none;
     text-decoration: none;
@@ -431,7 +432,7 @@ p {
       position: absolute;
       inset: 0;
       z-index: 2;
-      background-color: #A39175B5;
+      background-color: variable.$color-border;
       transform: scaleX(0);
       transform-origin: left bottom;
       transition: transform 0.32s ease-in-out;
@@ -446,17 +447,17 @@ p {
     &__presention {
       width: 70%;
     }
-    &__show{
+    &__show {
       width: 100%;
       transition: width 1s ease-in-out, background 1s ease-in-out;
     }
-    &__show:hover{
+    &__show:hover {
       background-color: #212121;
       width: 110%;
     }
     &__show:hover &__button {
       font-size: 2rem;
-      color: #A39175;
+      color: variable.$color-border;
     }
   }
 }
@@ -467,8 +468,8 @@ p {
 
   &__back {
     padding: 2rem 1rem;
-    color: white;
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 30%);
+    color: variable.$color-white;
+    border-bottom: 0.1rem solid variable.$color-border;
     display: flex;
     gap: 1rem;
     text-decoration: none;
@@ -476,7 +477,7 @@ p {
   }
 
   &__back:hover {
-    color: #A39175;
+    color: variable.$color-border;
   }
 
   &__back::before {
@@ -511,7 +512,7 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    border-top: 0.1rem solid variable.$color-border;
   }
 
   &__label, &__value {
@@ -525,10 +526,10 @@ p {
 
   &__show {
     padding: 2rem 1rem;
-    border-top: 0.1rem solid rgba(255, 255, 255, 30%);
+    border-top: 0.1rem solid variable.$color-border;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: variable.$color-white;
     text-decoration: none;
 
 
@@ -556,7 +557,7 @@ p {
 
   &__show__image__container::after {
     content: "";
-    background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: variable.$image-overlay;
     position: absolute;
     inset: 0;
     border-radius: 1rem;
@@ -597,14 +598,13 @@ p {
   &__explication__text {
     flex: 2;
     font-family: Inter, sans-serif;
-
     line-height: 1.2rem;
     font-weight: 300;
   }
 
   &__explication__text a {
     text-decoration: none;
-    color: #A39175;
+    color: variable.$color-border;
   }
 
   @media (min-width: 767px) {
@@ -644,21 +644,11 @@ p {
     &__explication__content {
       margin-bottom: 4rem;
     }
-
   }
-
-
 }
 
 p strong {
-  color: #A39175;
-}
-
-@media (min-width: 767px) {
-  p {
-
-  }
-
+  color: variable.$color-border;
 }
 
 .intro {
@@ -690,7 +680,7 @@ p strong {
 
   &__brace {
     font-size: 9rem;
-    color: #A39175;
+    color: variable.$color-border;
     transition: transform 0.8s ease;
   }
 
@@ -711,7 +701,6 @@ p strong {
     font-family: cormorant_Garamond, serif;
     font-size: 2rem;
     line-height: 1.2;
-    color: #fff;
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateY(1rem);
@@ -721,10 +710,10 @@ p strong {
   &__enter {
     font-family: Inter, sans-serif;
     padding: 0.8rem 1.2rem;
-    border: 0.1rem solid #A39175;
+    border: 0.1rem solid variable.$color-border;
     border-radius: 0.8rem;
     background-color: transparent;
-    color: #A39175;
+    color: variable.$color-border;
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
@@ -735,7 +724,7 @@ p strong {
   }
 
   &__enter:hover {
-    background-color: #A39175;
+    background-color: variable.$color-border;
     color: black;
   }
 
@@ -752,37 +741,6 @@ p strong {
     opacity: 1;
     transform: translateY(0);
   }
-
-  //} a supprimer essaye lettre
-  //
-  //&__name {
-  //  font-family: cormorant_Garamond, serif;
-  //  font-size: 5rem;
-  //  display: flex;
-  //  align-items: center;
-  //  color: white;
-  //}
-  //
-  //&__initial {
-  //  color: #A39175;
-  //  transform: translateX(0);
-  //  transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);
-  //}
-  //&__open &__initial{
-  //  transform: translateX(-0.8rem);
-  //}
-  //&__open &__rest{
-  //  opacity: 1;
-  //  transform: translateX(0) scaleX(1);
-  //}
-  //&__rest__close{
-  //}
-  //&__rest__open{
-  //  transform: translateX(-2rem) scaleX(0.75);
-  //  transform-origin: left center;
-  //  transition: transform 1s cubic-bezier(.22, 1, .36, 1);
-  //  display: inline-block;
-  //}
 
   @media (min-width: 767px) {
     &__brace {
