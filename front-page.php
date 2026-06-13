@@ -9,10 +9,6 @@ $intro_enter = get_field('intro_enter');
 <main class="intro intro__open"
       itemprop="mainContentOfPage">
     <button class="intro__trigger" type="button" aria-label="Ouvrir l’introduction">
-<!--           <span class="intro__name">-->
-<!--            <span class="intro__initial">A</span>-->
-<!--            <span class="intro__rest intro__rest__open">ssia Rabhioui</span>-->
-<!--        </span>-->
         <span class="intro__brace intro__brace__left">{</span>
         <span class="intro__brace intro__brace__right">}</span>
     </button>

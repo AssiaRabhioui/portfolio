@@ -15,8 +15,6 @@ $error_texte = get_field('error_texte');
     <div class="error__background">
         <p class="error__number">404</p>
     </div>
-
-    <!--    <p class="eyebrow fade-in">Erreur 404</p>-->
     <?php if ($current_lang === 'en'): ?>
         <h1 class="error__texte">
             There is <em class="error__texte__em">nothing</em> here.
@@ -27,8 +25,6 @@ $error_texte = get_field('error_texte');
         </h1>
     <?php endif; ?>
 
-
-    <!--    <a href="#" class="error__home">Revenir à l'accueil</a>-->
     <?php if (!empty($error_home)) : ?>
         <a class="error__home"
            href="<?= esc_url($error_home['url']); ?>"

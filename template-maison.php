@@ -19,7 +19,6 @@ $about_details = get_field('about_details');
 $contact_heading_number = get_field('contact_heading_number');
 $contact_heading_title = get_field('contact_heading_title');
 $contact_title = get_field('contact_title');
-$contact_title_surligne = get_field('contact_title_surligne');
 $contact_text = get_field('contact_text');
 
 $contact_label_name = get_field('contact_label_name');
@@ -149,7 +148,7 @@ $contact_button = get_field('contact_button');
                     <?php if (isset($_GET['contact']) && $_GET['contact'] === 'success') : ?>
                         <p>Votre message a été envoyé avec succès.</p>
                     <?php endif; ?>
-                    <?php if (isset($_GET['contact']) && $_GET['contact'] === 'fail') : ?>
+                    <?php if (isset($_GET['contact']) && $_GET['contact'] === 'error') : ?>
                         <p>
                             Erreur : le message n’a pas été envoyé.
                         </p>

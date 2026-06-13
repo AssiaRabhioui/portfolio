@@ -85,8 +85,6 @@ function handle_contact_form(): void
         'Reply-To: ' . $name . ' <' . $email . '>',
     ];
 
-    wp_mail($to, $subject, $body, $headers);
-
     $sent = wp_mail($to, $subject, $body, $headers);
 
     if ($sent) {
