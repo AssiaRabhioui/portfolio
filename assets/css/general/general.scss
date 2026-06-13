@@ -24,7 +24,7 @@ p {
 
 .hero {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid variable.$color-border;
+  border-bottom: 0.1rem solid  variable.$color-border;
 
   &__subtitle {
     font-family: inter, sans-serif;
@@ -60,16 +60,16 @@ p {
 
   &__button {
     padding: 0.8rem 1rem;
-    border: 0.1rem solid variable.$color-border;
+    border: 0.1rem solid  variable.$color-gold;
     border-radius: 0.8rem;
-    color: variable.$color-border;
+    color:  variable.$color-gold;
     text-decoration: none;
     display: inline-block;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
 
   &__button:hover {
-    background-color: variable.$color-border;
+    background-color:  variable.$color-gold;
     color: black;
 
   }
@@ -97,7 +97,7 @@ p {
 
 .about {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid variable.$color-border;
+  border-bottom: 0.1rem solid  variable.$color-border;
 
   &__heading {
     display: flex;
@@ -108,7 +108,7 @@ p {
   }
 
   &__number {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   &__title {
@@ -127,7 +127,7 @@ p {
     padding: 1rem;
     display: flex;
     justify-content: space-between;
-    border-top: 0.1rem solid variable.$color-border;
+    border-top: 0.1rem solid  variable.$color-border
   }
 
   &__label, &__value {
@@ -164,7 +164,7 @@ p {
 
 .contact {
   padding: 3rem 1rem;
-  border-bottom: 0.1rem solid variable.$color-border;
+  border-bottom: 0.1rem solid  variable.$color-border;
 
   &__heading__group {
     display: flex;
@@ -175,7 +175,7 @@ p {
   }
 
   &__heading__number {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   &__heading__title {
@@ -190,7 +190,7 @@ p {
   }
 
   &__title__surligne {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   &__text {
@@ -227,7 +227,7 @@ p {
   }
 
   &__input:focus-visible {
-    outline: 0.1rem solid variable.$color-border;
+    outline: 0.1rem solid variable.$color-gold;
   }
 
   &__input:invalid,
@@ -243,9 +243,9 @@ p {
 
   &__button {
     padding: 0.8rem 1rem;
-    border: 0.1rem solid variable.$color-border;
+    border: 0.1rem solid  variable.$color-border;
     border-radius: 0.8rem;
-    color: variable.$color-border;
+    color:  variable.$color-gold;
     background-color: transparent;
     text-decoration: none;
     display: inline-block;
@@ -255,7 +255,7 @@ p {
   }
 
   &__button:hover {
-    background-color: variable.$color-border;
+    background-color:  variable.$color-gold;
     color: black;
 
   }
@@ -305,7 +305,7 @@ p {
   &__headers::before {
     content: "";
     width: 0.1rem;
-    background-color: variable.$color-border;
+    background-color:  variable.$color-gold;
   }
 
   &__title {
@@ -314,7 +314,7 @@ p {
   }
 
   &__title__surligne {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   &__presention {
@@ -327,7 +327,7 @@ p {
   &__show {
     display: flex;
     gap: 1rem;
-    border-top: 0.1rem solid variable.$color-border;
+    border-top: 0.1rem solid  variable.$color-border;
     margin-bottom: 3rem;
     position: relative;
     min-height: 10rem;
@@ -366,7 +366,7 @@ p {
   }
 
   &__number {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
     display: inline-block;
     margin-right: 1rem;
     margin-bottom: 2rem;
@@ -432,7 +432,7 @@ p {
       position: absolute;
       inset: 0;
       z-index: 2;
-      background-color: variable.$color-border;
+      background-color:  variable.$color-border;
       transform: scaleX(0);
       transform-origin: left bottom;
       transition: transform 0.32s ease-in-out;
@@ -442,22 +442,22 @@ p {
       transform: scaleX(1);
     }
     &__button {
-      transition: font-size 0.3s ease-in-out, color 0.3s ease;
+      transition: font-size 0.5s ease-in-out, color 0.5s ease;
     }
     &__presention {
       width: 70%;
     }
     &__show {
-      width: 100%;
-      transition: width 1s ease-in-out, background 1s ease-in-out;
+      width: 90%;
+      transition: width 0.5s ease-in-out, background 0.5s ease-in-out;
     }
     &__show:hover {
       background-color: #212121;
-      width: 110%;
+      width: 95%;
     }
     &__show:hover &__button {
-      font-size: 2rem;
-      color: variable.$color-border;
+      font-size: 1.5rem;
+      color:  variable.$color-gold;
     }
   }
 }
@@ -469,7 +469,7 @@ p {
   &__back {
     padding: 2rem 1rem;
     color: variable.$color-white;
-    border-bottom: 0.1rem solid variable.$color-border;
+    border-bottom: 0.1rem solid  variable.$color-border;
     display: flex;
     gap: 1rem;
     text-decoration: none;
@@ -477,7 +477,7 @@ p {
   }
 
   &__back:hover {
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   &__back::before {
@@ -512,7 +512,7 @@ p {
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    border-top: 0.1rem solid variable.$color-border;
+    border-top: 0.1rem solid  variable.$color-border;
   }
 
   &__label, &__value {
@@ -526,7 +526,7 @@ p {
 
   &__show {
     padding: 2rem 1rem;
-    border-top: 0.1rem solid variable.$color-border;
+    border-top: 0.1rem solid  variable.$color-border;
     display: flex;
     flex-direction: column;
     color: variable.$color-white;
@@ -604,7 +604,7 @@ p {
 
   &__explication__text a {
     text-decoration: none;
-    color: variable.$color-border;
+    color:  variable.$color-gold;
   }
 
   @media (min-width: 767px) {
@@ -648,7 +648,7 @@ p {
 }
 
 p strong {
-  color: variable.$color-border;
+  color:  variable.$color-gold;
 }
 
 .intro {
@@ -680,7 +680,7 @@ p strong {
 
   &__brace {
     font-size: 9rem;
-    color: variable.$color-border;
+    color:  variable.$color-gold;
     transition: transform 0.8s ease;
   }
 
@@ -710,10 +710,10 @@ p strong {
   &__enter {
     font-family: Inter, sans-serif;
     padding: 0.8rem 1.2rem;
-    border: 0.1rem solid variable.$color-border;
+    border: 0.1rem solid  variable.$color-gold;
     border-radius: 0.8rem;
     background-color: transparent;
-    color: variable.$color-border;
+    color:  variable.$color-gold;
     font-size: 1rem;
     cursor: pointer;
     text-decoration: none;
@@ -724,7 +724,7 @@ p strong {
   }
 
   &__enter:hover {
-    background-color: variable.$color-border;
+    background-color:  variable.$color-gold;
     color: black;
   }
 
